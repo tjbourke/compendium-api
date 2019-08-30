@@ -31,7 +31,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []User
+            "dont-discover": []
         }
     },
     "autoload": {
