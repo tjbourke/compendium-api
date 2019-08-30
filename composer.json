@@ -13,6 +13,7 @@
         "fideloper/proxy": "^4.0",
         "garygreen/pretty-routes": "^1.0",
         "laravel/framework": "5.8.*",
+        "laravel/passport": "^7.4",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
@@ -30,7 +31,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": []User
         }
     },
     "autoload": {
