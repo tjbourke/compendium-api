@@ -27,7 +27,7 @@ class PhotosController extends Controller
      */
     public function store(Request $request)
     {
-        //return new PhotoResource(Photo::create($request));
+        return new PhotoResource(Photo::create($request));
     }
 
     /**
