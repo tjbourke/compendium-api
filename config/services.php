@@ -33,5 +33,10 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
+    'passport' => [
+        'login_endpoint' => env('PASSPORT_LOGIN_ENDPOINT', 'http://api.compendium.test/oauth/token'),
+        'client_id' => env('OAUTH_PASSWORD_GRANT_CLIENT_ID', 1),
+        'client_secret' => env('OAUTH_PASSWORD_GRANT_CLIENT_SECRET', '1yTF4oJcMEE9jiA7Wg8b1CYFtslM8cBgaajR4Unb'),
+    ]
 
 ];

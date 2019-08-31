@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function() {
+   return 'server is up';
 });
 
-Route::resource('/photos2', 'PhotosController');
+Route::apiResource('/photos2', 'PhotosController');
