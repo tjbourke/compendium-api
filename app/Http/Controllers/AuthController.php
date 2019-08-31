@@ -13,6 +13,7 @@ class AuthController extends Controller
 
         $password = $request->password;
         $username = $request->username;
+
         try {
             $response = $http->post(config('services.passport.login_endpoint'), [
                 'form_params' => [
@@ -23,6 +24,7 @@ class AuthController extends Controller
                     'password' => $password,
                 ],
             ]);
+
             $user = User::where('email', $username)->first(); // There should be only one or our database is screwed!!
             $user->clearTokensExceptForLatest();
 
