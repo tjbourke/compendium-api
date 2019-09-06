@@ -15,6 +15,7 @@ class PhotoWriteRequest extends FormRequest
     {
         return [
             'name' => 'required',
+            'photo_url' => 'required',
         ];
     }
 }
