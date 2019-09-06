@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PhotoWriteRequest;
 use App\Http\Resources\PhotoResource;
 use App\Models\Photo;
 use Illuminate\Http\Request;
@@ -25,9 +26,11 @@ class PhotosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PhotoWriteRequest $request)
     {
-        return new PhotoResource(Photo::create($request));
+        $attributes = $request->validated();
+
+        return new PhotoResource(Photo::create($attributes));
     }
 
     /**
